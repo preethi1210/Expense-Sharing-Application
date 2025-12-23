@@ -11,6 +11,9 @@ app.use(express.json());
 
 app.use('/api/users', userRoutes);
 app.use('/api/groups', groupRoutes);
+app.get('/', (req, res) => {
+  res.send('Expense Sharing API is running!');
+});
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
