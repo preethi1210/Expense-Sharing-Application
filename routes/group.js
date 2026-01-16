@@ -11,8 +11,6 @@ import {
 const router = Router();
 
 router.post('/creategroup', createGroup);
-router.get('/getgroups', getGroups);
-router.get('/getgroups/:userId', getGroupsByUser);
 router.post('/addexpense', addExpense);
 router.get('/:groupId/balances', getGroupBalances);
 router.get('/:groupId/settle', settleGroup);
